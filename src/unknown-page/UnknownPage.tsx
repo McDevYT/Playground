@@ -1,29 +1,25 @@
 import "./UnknownPage.css";
-import Ribbons from "../ribbons/Ribbons.tsx";
+import FuzzyText from "../fuzzy-text/FuzzyText";
 
 function UnknownPage() {
   return (
     <>
-      <h1>404 Page not found!</h1>
-      <div
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          zIndex: 10,
-          overflow: "hidden",
-        }}
+      <FuzzyText
+        baseIntensity={0.2}
+        enableHover={true}
+        color="rgb(170, 170, 170)"
       >
-        <Ribbons
-          baseThickness={30}
-          colors={["#ffffff"]}
-          speedMultiplier={0.5}
-          maxAge={500}
-          enableFade={false}
-        />
-      </div>
+        404
+      </FuzzyText>
+      <br />
+      <FuzzyText
+        baseIntensity={0.2}
+        fontSize={45}
+        color="rgb(170, 170, 170)"
+        enableHover={true}
+      >
+        Not Found
+      </FuzzyText>
     </>
   );
 }
