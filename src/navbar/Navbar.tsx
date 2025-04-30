@@ -1,6 +1,6 @@
 import "./Navbar.css";
 import facePNG from "../assets/face.png";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
   const navigate = useNavigate();
