@@ -1,6 +1,7 @@
 import { useState } from "react";
 import facePNG from "./assets/face.png";
 import "./App.css";
+import MouseFollower from "./MouseFollower";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,6 +19,7 @@ function App() {
           count is {count}
         </button>
       </div>
+      <MouseFollower />
     </>
   );
 }
