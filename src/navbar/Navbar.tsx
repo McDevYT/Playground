@@ -33,6 +33,13 @@ function Navbar() {
         </a>
         <a
           onClick={() => {
+            navigate("/qna");
+          }}
+        >
+          QnA
+        </a>
+        <a
+          onClick={() => {
             navigate("/sdf");
           }}
         >

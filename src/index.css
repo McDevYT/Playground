@@ -1,4 +1,4 @@
-html{
+html {
   scroll-behavior: smooth;
   scrollbar-width: none;
 }
@@ -9,7 +9,6 @@ html{
   padding: 2rem;
   text-align: center;
 }
-
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
