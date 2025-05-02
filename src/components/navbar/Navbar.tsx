@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import facePNG from "../assets/face.png";
+import facePNG from "../../assets/face.png";
 import { useNavigate } from "react-router-dom";
 
 function Navbar() {
@@ -37,6 +37,13 @@ function Navbar() {
           }}
         >
           QnA
+        </a>
+        <a
+          onClick={() => {
+            navigate("/contact");
+          }}
+        >
+          Contact
         </a>
         <a
           onClick={() => {

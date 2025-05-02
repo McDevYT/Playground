@@ -4,7 +4,17 @@ import Noise from "./Noise";
 
 function UnknownPage() {
   return (
-    <>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center", // <-- this centers horizontally
+        justifyContent: "center",
+        width: "100vw",
+        zIndex: "10",
+        position: "relative", // so that absolute children still behave properly
+      }}
+    >
       <FuzzyText
         baseIntensity={0.2}
         enableHover={true}
@@ -41,7 +51,7 @@ function UnknownPage() {
           patternAlpha={15}
         />
       </div>
-    </>
+    </div>
   );
 }
 

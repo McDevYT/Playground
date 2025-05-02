@@ -1,8 +1,21 @@
-import "./QnA.css";
+import "./About.css";
 
-function QnA() {
+function About() {
   return (
-    <div style={{ paddingTop: "100px" }}>
+    <div
+      className="about"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "5em",
+        width: "auto",
+        zIndex: "10",
+        paddingTop: "10vh",
+        position: "relative", // so that absolute children still behave properly
+      }}
+    >
       <h1>About Page</h1>
       <p>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
@@ -53,4 +66,4 @@ function QnA() {
   );
 }
 
-export default QnA;
+export default About;

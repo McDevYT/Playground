@@ -1,0 +1,9 @@
+.question {
+  color: beige;
+
+  font-size: x-large;
+}
+.answer {
+  color: rgb(223, 223, 0);
+  font-size: x-large;
+}

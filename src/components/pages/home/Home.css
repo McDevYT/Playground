@@ -12,3 +12,7 @@
 .logo.mcdevyt:hover {
   filter: drop-shadow(0 0 1em #1265d1c7);
 }
+
+.home p {
+  font-size: 30em;
+}
