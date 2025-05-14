@@ -8,4 +8,7 @@ export default defineConfig({
   build: {
     minify: false,
   },
+  define: {
+    "process.env": process.env,
+  },
 });
