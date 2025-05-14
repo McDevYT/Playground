@@ -21180,12 +21180,12 @@ class OpenAI extends APIClient {
    * @param {Core.DefaultQuery} opts.defaultQuery - Default query parameters to include with every request to the API.
    * @param {boolean} [opts.dangerouslyAllowBrowser=false] - By default, client-side use of this library is not allowed, as it risks exposing your secret API credentials to attackers.
    */
-  constructor({ baseURL = readEnv("OPENAI_BASE_URL"), apiKey: apiKey2 = readEnv("OPENAI_API_KEY"), organization = readEnv("OPENAI_ORG_ID") ?? null, project = readEnv("OPENAI_PROJECT_ID") ?? null, ...opts } = {}) {
-    if (apiKey2 === void 0) {
+  constructor({ baseURL = readEnv("OPENAI_BASE_URL"), apiKey = readEnv("OPENAI_API_KEY"), organization = readEnv("OPENAI_ORG_ID") ?? null, project = readEnv("OPENAI_PROJECT_ID") ?? null, ...opts } = {}) {
+    if (apiKey === void 0) {
       throw new OpenAIError("The OPENAI_API_KEY environment variable is missing or empty; either provide it, or instantiate the OpenAI client with an apiKey option, like new OpenAI({ apiKey: 'My API Key' }).");
     }
     const options = {
-      apiKey: apiKey2,
+      apiKey,
       organization,
       project,
       ...opts,
@@ -21218,7 +21218,7 @@ class OpenAI extends APIClient {
     this.responses = new Responses(this);
     this.evals = new Evals(this);
     this._options = options;
-    this.apiKey = apiKey2;
+    this.apiKey = apiKey;
     this.organization = organization;
     this.project = project;
   }
@@ -21281,10 +21281,9 @@ OpenAI.Uploads = Uploads;
 OpenAI.Responses = Responses;
 OpenAI.Evals = Evals;
 OpenAI.EvalListResponsesPage = EvalListResponsesPage;
-const apiKey = "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";
 const client = new OpenAI({
   baseURL: "https://openrouter.ai/api/v1",
-  apiKey,
+  apiKey: "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",
   // Ensure the API key is passed correctly
   defaultHeaders: {},
   dangerouslyAllowBrowser: true
