@@ -12,7 +12,8 @@ if (!apiKey) {
 
 const client = new OpenAI({
   baseURL: "https://openrouter.ai/api/v1",
-  apiKey: apiKey, // Ensure the API key is passed correctly
+  apiKey:
+    "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", // Ensure the API key is passed correctly
   defaultHeaders: {},
   dangerouslyAllowBrowser: true,
 });
